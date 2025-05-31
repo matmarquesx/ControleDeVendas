@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle de Vendas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Controle de Vendas</h1>
+        
+        <div class="main-content">
+            <div class="products-section">
+                <h2>Controle de Vendas:</h2>
+                <table id="products-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Produto:</th>
+                            <th>Preço (em R$):</th>
+                            <th>Quantidade:</th>
+                            <th>Subtotal:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="camiseta-regata" data-price="19.90"></td>
+                            <td>Camiseta Regata</td>
+                            <td>19.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="camisa-social" data-price="59.90"></td>
+                            <td>Camisa Social</td>
+                            <td>59.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="blusa" data-price="119.90"></td>
+                            <td>Blusa</td>
+                            <td>119.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="pullover" data-price="39.90"></td>
+                            <td>Pullover</td>
+                            <td>39.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="sapato" data-price="99.90"></td>
+                            <td>Sapato</td>
+                            <td>99.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="calca" data-price="38.90"></td>
+                            <td>Calça</td>
+                            <td>38.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="meias" data-price="9.90"></td>
+                            <td>Meias</td>
+                            <td>9.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="luvas" data-price="24.90"></td>
+                            <td>Luvas</td>
+                            <td>24.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="jaqueta" data-price="329.90"></td>
+                            <td>Jaqueta</td>
+                            <td>329.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="bermuda" data-price="69.90"></td>
+                            <td>Bermuda</td>
+                            <td>69.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="chinelo" data-price="14.90"></td>
+                            <td>Chinelo</td>
+                            <td>14.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="product" value="bone" data-price="6.90"></td>
+                            <td>Boné</td>
+                            <td>6.90</td>
+                            <td><input type="number" min="0" value="0" class="quantity-input"></td>
+                            <td class="subtotal">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="payment-section">
+                <h2>Forma de Pagamento:</h2>
+                <div class="payment-options">
+                    <div class="payment-option">
+                        <input type="radio" id="payment-cash" name="payment-method" value="vista" checked>
+                        <label for="payment-cash">À Vista</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="payment-installment" name="payment-method" value="prazo">
+                        <label for="payment-installment">À Prazo</label>
+                    </div>
+                </div>
+                
+                <div class="installment-options">
+                    <label for="installment-count">Quantidade de Parcelas:</label>
+                    <select id="installment-count" disabled>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="result-section">
+                <h2>Resumo da Compra</h2>
+                <div class="result-content">
+                    <div class="result-item">
+                        <span>Valor Total:</span>
+                        <span id="total-value">R$ 0.00</span>
+                    </div>
+                    <div class="result-item" id="discount-container">
+                        <span>Desconto (8,5%):</span>
+                        <span id="discount-value">R$ 0.00</span>
+                    </div>
+                    <div class="result-item" id="installment-fee-container" style="display: none;">
+                        <span>Taxa de Parcelamento (6% + R$ 6,90 por parcela):</span>
+                        <span id="installment-fee-value">R$ 0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Valor Final:</span>
+                        <span id="final-value">R$ 0.00</span>
+                    </div>
+                    <div class="result-item" id="installment-value-container" style="display: none;">
+                        <span>Valor de cada Parcela:</span>
+                        <span id="installment-value">R$ 0.00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="calculate-button">Calcular</button>
+                <button id="reset-button">Limpar</button>
+            </div>
+        </div>
+        
+        <div class="observations">
+            <h2>Observações importantes:</h2>
+            <ul>
+                <li>Quantidade de parcelas: 2, 3, 4 ou 5.</li>
+                <li>Valor da parcela: Não poderá ser inferior a R$ 10,00.</li>
+                <li>Taxa de parcelamento: 6% do valor da venda e mais R$ 6,90 para cada parcela.</li>
+                <li>Pagamento à vista: 8,5% de desconto no valor da venda.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
